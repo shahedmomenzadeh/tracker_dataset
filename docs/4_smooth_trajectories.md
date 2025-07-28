@@ -30,7 +30,7 @@ The script's behavior can be customized through the following configuration vari
 3.  **Data Loading and Grouping**: The annotations are grouped by object `id` to form individual trajectories.
 4.  **Instrument Filtering**: The script only processes trajectories for objects whose class is in the `INSTRUMENT_CLASSES` set.
 5.  **Trajectory Smoothing**: The `smooth_trajectory_with_spline` function is applied to the trajectory of each instrument. This function performs the following steps:
-    -   **Keypoint Extraction**: It extracts the center point of the bounding box for each frame in the trajectory.
+    -   **Keypoint Extraction**: It extracts the tip for each instrument in each frame in the trajectory.
     -   **Outlier Detection**: It uses a sliding window approach. For each point in the trajectory, it looks at the points within the `WINDOW_SIZE`. It calculates the velocity between consecutive points. If a point's velocity is a significant outlier (greater than `THRESHOLD_STD_DEV` standard deviations from the median velocity in the window), it is flagged.
     -   **Outlier Removal**: The flagged outlier points are removed from the trajectory.
     -   **Cubic Spline Interpolation**: A cubic spline is fitted to the remaining, non-outlier keypoints. This mathematical function creates a smooth curve that passes through the keypoints.
