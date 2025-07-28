@@ -12,8 +12,8 @@ Before you begin, ensure you have Python installed on your system. This project 
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/shahedmomenzadeh/tracker_dataset
+    cd tracker_dataset
     ```
 
 2.  **Create a virtual environment (recommended):**
@@ -191,7 +191,7 @@ This key exists **only** within annotations for the 10 surgical instrument class
 
 #### Example Snippet
 
-This example shows the structure for a "Forceps" annotation (with motion features) and a "Pupil" annotation (without).
+This example shows the structure for a "Forceps" annotation (with motion features) and a "Pupil" annotation.
 
 ```json
 "annotations": [
